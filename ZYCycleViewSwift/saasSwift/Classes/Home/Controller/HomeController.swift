@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
+class HomeController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CycleViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,16 @@ class HomeController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+    }
+}
+
+//MARK: CycleViewDelegate
+extension HomeController {
+    func cycleViewDidSelectedItemAtIndex(_ index: NSInteger) {
+        let demoVc = DemoController()
+        demoVc.title = "点击了轮播图第\(index)个图片"
+        demoVc.view.backgroundColor = UIColor.white
+        navigationController?.pushViewController(demoVc, animated: true)
     }
 }
 
@@ -133,7 +143,7 @@ extension HomeController{
             //轮播图加载
             let pointY = 44 + UIApplication.shared.statusBarFrame.size.height
             let cycleView : CycleView = CycleView(frame: CGRect(x: 0, y: pointY, width: UIScreen.main.bounds.size.width, height: 220))
-            
+            cycleView.delegate = self
             cycleView.mode = .scaleAspectFill
             //本地图片测试--加载网络图片,请用第三方库如SDWebImage等
             cycleView.imageURLStringArr = ["banner01.jpg", "banner02.jpg", "banner03.jpg", "banner04.jpg"]

@@ -15,6 +15,20 @@ cycleView.mode = .scaleAspectFill
 cycleView.imageURLStringArr = ["banner01.jpg", "banner02.jpg", "banner03.jpg", "banner04.jpg"]
 tableView.tableHeaderView = cycleView
 ```
+## 增加了代理方法
+
+``` 代理方法 CycleViewDelegate
+//MARK: CycleViewDelegate
+extension HomeController {
+    func cycleViewDidSelectedItemAtIndex(_ index: NSInteger) {
+        let demoVc = DemoController()
+        demoVc.title = "点击了轮播图第\(index)个图片"
+        demoVc.view.backgroundColor = UIColor.white
+        navigationController?.pushViewController(demoVc, animated: true)
+    }
+}
+```
+
 
 ## Objective-C版
 
@@ -27,5 +41,9 @@ tableView.tableHeaderView = cycleView
 </p>
 
 <p align="center" >
-<img src="Docs/ZYCycleView.gif" title="效果图">
+<img src="Docs/ZYCycleViewSwift.gif" title="效果图">
+</p>
+
+<p align="center" >
+<img src="Docs/00003.png" title="源码位置">
 </p>

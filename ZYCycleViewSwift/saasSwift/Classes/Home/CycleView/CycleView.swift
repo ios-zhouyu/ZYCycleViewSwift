@@ -14,7 +14,14 @@ enum contentMode {
     case scaleAspectFit
 }
 
+protocol CycleViewDelegate : class {
+    func cycleViewDidSelectedItemAtIndex(_ index : NSInteger) -> ()
+}
+
 class CycleView: UIView,UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    //代理
+    weak var delegate : CycleViewDelegate?
     
     var mode : contentMode? = .scaleAspectFill
 
@@ -144,6 +151,10 @@ extension CycleView {
 
 //MARK: 数据源和代理方法
 extension CycleView {
+    //FIXME: 点击cell的代理方法
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.cycleViewDidSelectedItemAtIndex(indexPath.item % (imageURLStringArr?.count)!)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (imageURLStringArr?.count)! * 2 * KCount
     }
