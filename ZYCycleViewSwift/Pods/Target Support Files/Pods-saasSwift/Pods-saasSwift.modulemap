@@ -1,0 +1,6 @@
+framework module Pods_saasSwift {
+  umbrella header "Pods-saasSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

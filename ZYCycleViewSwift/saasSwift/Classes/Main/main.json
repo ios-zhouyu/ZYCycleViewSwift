@@ -1,0 +1,33 @@
+ [
+      {
+          "RootVcName": "HomeController",
+          "SellectImgName": "tabbar_home_select",
+          "TabbarTitle": "首页",
+          "NorImgName": "tabbar_home_normal"
+      },
+      {
+          "RootVcName": "SaasController",
+          "SellectImgName": "tabbar_need_select",
+          "TabbarTitle": "供应链",
+          "NorImgName": "tabbar_need_normal"
+      },
+      {
+          "RootVcName": "VendorController",
+          "SellectImgName": "tabbar_vendor_select",
+          "TabbarTitle": "供应商",
+          "NorImgName": "tabbar_vendor_normal"
+      },
+      {
+          "RootVcName": "ExpertController",
+          "SellectImgName": "tabbar_expert_select",
+          "TabbarTitle": "专家",
+          "NorImgName": "tabbar_expert_normal"
+      },
+      {
+          "RootVcName": "EcommerceController",
+          "SellectImgName": "tabbar_ecommerce_select",
+          "TabbarTitle": "电商平台",
+          "NorImgName": "tabbar_ecommerce_normal"
+      },
+  
+  ]
