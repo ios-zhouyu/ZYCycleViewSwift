@@ -49,7 +49,7 @@ extension TabBarController{
     //使用字典加载控制器
     fileprivate func childrenController(dict: [String : AnyObject]) -> UIViewController {
         
-        //取得指点内容
+        //取得内容
         guard let RootVcName = dict["RootVcName"] as? String,
             let TabbarTitle = dict["TabbarTitle"] as? String,
             let NorImgName = dict["NorImgName"] as? String,

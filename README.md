@@ -47,3 +47,7 @@ extension HomeController {
 <p align="center" >
 <img src="Docs/00003.png" title="源码位置">
 </p>
+
+<p align="center" >
+<img src="Docs/00004.png" title="http网络加载的说明">
+</p>

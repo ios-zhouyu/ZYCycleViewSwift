@@ -32,11 +32,9 @@ extension UIColor{
         
         let gRange = cStr.index(cStr.startIndex, offsetBy: 2) ..< cStr.index(cStr.startIndex, offsetBy: 4)
         let gStr = String(cStr[gRange])
-//        let gStr = cStr.substring(with: gRange)
         
         let bIndex = cStr.index(cStr.endIndex, offsetBy: -2)
         let bStr = String(cStr[bIndex...])
-//        let bStr = cStr.substring(from: bIndex)
         
         var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
         Scanner(string: rStr).scanHexInt32(&r)

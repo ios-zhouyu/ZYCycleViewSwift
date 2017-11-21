@@ -27,8 +27,6 @@ class NavigationBar: UIView {
         bezierPath.fill()
         
         //绘制底部灰色的线
-//        let lineBottom : CGFloat = 1 / UIScreen.main.scale
-//        let lineY : CGFloat = bounds.size.height - lineBottom
         let lineBezier = UIBezierPath()
         lineBezier.move(to: CGPoint(x: 0, y: height))
         lineBezier.addLine(to: CGPoint(x: width, y: height))
