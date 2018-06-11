@@ -1,7 +1,6 @@
 # ZYCycleView-
 
-`QQ: 1512450002@qq.com`
-`欢迎沟通交流`
+`QQ: 1512450002@qq.com  欢迎沟通交流`
 
 ZYCycleView(图片轮播器)
 
