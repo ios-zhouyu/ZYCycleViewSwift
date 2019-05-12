@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "8.0"
   spec.source       = { :git => "https://github.com/ios-zhouyu/ZYCycleViewSwift.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "ZYCycleViewSwift", "ZYCycleViewSwift/**/*.{h,m,swift}"
+  spec.source_files  = "saasSwift/Classes/Home/CycleView/*.{swift}"
   spec.public_header_files = "ZYCycleViewSwift/*.swift"
   spec.ios.deployment_target = '8.0'
 
